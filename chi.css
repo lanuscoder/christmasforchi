@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+
+@font-face {
+    font-family: chi;
+    src: url(Hey\ Comic.otf);
+    font-family: chi2;
+    src: url(bahnschrift.ttf);
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url(1223.png) no-repeat center; 
+    position: relative;
+    background-size: cover;
+
+}
+
+.snow, .snow2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(snow.png);
+    background-position: 0 0;
+}
+
+.snow
+{
+    background-size: 70em;
+    animation: 
+        snowfall 50s linear infinite;
+    opacity: 90%;
+}
+
+.snow2
+{
+    background-size: 50em;
+    animation: 
+        snowfall2 50s linear infinite;
+        opacity: 0.5;
+}
+
+.text
+{
+    color: #fff;
+    text-align: center;
+    
+}
+
+.text h1 {
+    font-family: chi,cursive;
+    font-size: 6em;
+    text-shadow: 5px 5px 10px #111;
+    animation: floating 2s linear infinite;
+}
+.text p{
+    font-family: chi2;
+    font-size: 2em;
+}
+.anh{
+    cursor: pointer;
+    animation: young 2s infinite;
+}
+.anh:hover{
+    animation-play-state: paused;
+}
+.anh2
+{
+    width: 1em;
+    height: 1em;
+}
+.giphy-embed
+{
+    justify-content: left;
+}
+@keyframes snowfall {
+    100%
+    {
+        background-position: 70em 70em;
+    }
+}
+
+@keyframes snowfall2 {
+    100%
+    {
+        background-position: 50em 0;
+    }
+}
+
+@keyframes floating {
+    0%
+    {
+        transform: translate(0,-50%);
+    }
+    50%
+    {
+        transform: translate(0,-30%);
+    }
+    100%
+    {
+        transform: translate(0,-50%);
+    }
+}
+@keyframes young {
+    50%
+    {
+        transform: rotate(10deg);
+    }
+}
